@@ -37,24 +37,21 @@ export const AddRefueling = () => {
           />
         </div>
         <div className="form-control">
-          <label htmlFor="fuelAmount"> Fuel (L)
-          </label>
+          <label htmlFor="fuelAmount"> Fuel (L)</label>
           <input
             type="number"
             value={fuelAmount}
             onChange={(e) => setFuelAmount(e.target.value)}
             placeholder="Enter fuelAmount..."
           />
-          <label htmlFor="moneySpent"> Money Spent (€)
-          </label>
+          <label htmlFor="moneySpent"> Money Spent (€)</label>
           <input
             type="number"
             value={moneySpent}
             onChange={(e) => setMoneySpent(e.target.value)}
             placeholder="Enter fuelAmount..."
           />
-          <label htmlFor="distanceDriven"> Distance driven (km)
-          </label>
+          <label htmlFor="distanceDriven"> Distance driven (km)</label>
           <input
             type="number"
             value={distanceDriven}
