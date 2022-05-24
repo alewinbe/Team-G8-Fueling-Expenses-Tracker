@@ -14,14 +14,26 @@ export const FuelingExpenses = () => {
     .filter((item) => item > 0)
     .reduce((acc, item) => (acc += item), 0)
     .toFixed(2);
+
   const totalFuelAmount = fuelAmount
     .filter((item) => item > 0)
     .reduce((acc, item) => (acc += item), 0)
     .toFixed(2);
+
   const totalDistanceDriven = distanceDriven
     .filter((item) => item > 0)
     .reduce((acc, item) => (acc += item), 0)
     .toFixed(2);
+
+  const avgExpenses =
+    (totalDistanceDriven / 100) *
+    ((totalFuelAmount * 100) / totalDistanceDriven) *
+    (totalMoneySpent / totalFuelAmount).toFixed(2);
+
+  const avgConsumption = (
+    (totalFuelAmount * 100) /
+    totalDistanceDriven
+  ).toFixed(2);
 
   return (
     <div className="inc-exp-container">
@@ -36,10 +48,10 @@ export const FuelingExpenses = () => {
         <p className="money plus">{totalDistanceDriven}</p>
 
         <h4>Avg. Expenses/100km (€)</h4>
-        <p className="money plus">{}</p>
+        <p className="money plus">{avgExpenses}</p>
 
         <h4>Avg. Consumption/100km (L)</h4>
-        <p className="money plus">{}</p>
+        <p className="money plus">{avgConsumption}</p>
       </div>
     </div>
   );
