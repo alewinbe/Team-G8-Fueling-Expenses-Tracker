@@ -1,8 +1,8 @@
 import React from "react";
 import { Header } from "./components/Header";
 import { FuelingExpenses } from "./components/FuelingExpenses";
-import { Transactionlist } from "./components/Transactionlist";
-import { AddTransaction } from "./components/AddTransaction";
+import { RefuelingList } from "./components/RefuelingList";
+import { AddRefueling } from "./components/AddRefueling";
 
 import { GlobalProvider } from "./context/GlobalState";
 import "./App.css";
@@ -13,8 +13,8 @@ function App() {
       <Header />
       <div className="container">
         <FuelingExpenses />
-        <Transactionlist />
-        <AddTransaction />
+        <RefuelingList />
+        <AddRefueling />
       </div>
     </GlobalProvider>
   );

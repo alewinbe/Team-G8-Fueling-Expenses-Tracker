@@ -1,18 +1,18 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
-export const AddTransaction = () => {
+export const AddRefueling = () => {
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
   const [amountt, setAmountt] = useState(0);
   const [amounttt, setAmounttt] = useState(0);
 
-  const { addTransaction } = useContext(GlobalContext);
+  const { addRefueling } = useContext(GlobalContext);
 
   const onSubmit = (e) => {
     e.preventDefault();
 
-    const newTransaction = {
+    const newRefueling = {
       id: Math.floor(Math.random() * 100000000),
       text,
       amount: +amount,
@@ -20,26 +20,24 @@ export const AddTransaction = () => {
       amounttt: +amounttt,
     };
 
-    addTransaction(newTransaction);
+    addRefueling(newRefueling);
   };
 
   return (
     <>
-      <h3>Add new transaction</h3>
+      <h3>Add new Refueling</h3>
       <form onSubmit={onSubmit}>
         <div className="form-control">
-          <label htmlFor="text">Text</label>
+          <label htmlFor="text">Car</label>
           <input
             type="text"
             value={text}
             onChange={(e) => setText(e.target.value)}
-            placeholder="Enter text..."
+            placeholder="Enter car..."
           />
         </div>
         <div className="form-control">
-          <label htmlFor="amount">
-            Amount <br />
-            (negative - expense, positive - income)
+          <label htmlFor="amount"> Fuel (L)
           </label>
           <input
             type="number"
@@ -47,12 +45,16 @@ export const AddTransaction = () => {
             onChange={(e) => setAmount(e.target.value)}
             placeholder="Enter amount..."
           />
+          <label htmlFor="amountt"> Money Spent (€)
+          </label>
           <input
             type="number"
             value={amountt}
             onChange={(e) => setAmountt(e.target.value)}
             placeholder="Enter amount..."
           />
+          <label htmlFor="amounttt"> Distance driven (km)
+          </label>
           <input
             type="number"
             value={amounttt}
@@ -60,7 +62,7 @@ export const AddTransaction = () => {
             placeholder="Enter amount..."
           />
         </div>
-        <button className="btn">Add transaction</button>
+        <button className="btn">Add Refueling</button>
       </form>
     </>
   );
