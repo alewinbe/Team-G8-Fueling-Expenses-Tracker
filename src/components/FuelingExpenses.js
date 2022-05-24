@@ -4,9 +4,9 @@ import { GlobalContext } from "../context/GlobalState";
 export const FuelingExpenses= () => {
   const { refuelings } = useContext(GlobalContext);
 
-  const amounts = refuelings.map((refueling) => refueling.amount);
+  const fuelAmounts = refuelings.map((refueling) => refueling.fuelAmount);
 
-  const income = amounts
+  const income = fuelAmounts
     .filter((item) => item > 0)
     .reduce((acc, item) => (acc += item), 0)
     .toFixed(2);
@@ -14,7 +14,7 @@ export const FuelingExpenses= () => {
   return (
     <div className="inc-exp-container">
       <div>
-        <h4>€ Spent</h4>
+        <h4>Money Spent €</h4>
         <p className="money plus">{income}</p>
 
         <h4>Total consumption (L)</h4>
