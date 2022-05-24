@@ -1,7 +1,6 @@
 import React from "react";
 import { Header } from "./components/Header";
-import { Balance } from "./components/Balance.js";
-import { IncomeExpenses } from "./components/IncomeExpenses";
+import { FuelingExpenses } from "./components/FuelingExpenses";
 import { Transactionlist } from "./components/Transactionlist";
 import { AddTransaction } from "./components/AddTransaction";
 
@@ -13,7 +12,7 @@ function App() {
     <GlobalProvider>
       <Header />
       <div className="container">
-        <IncomeExpenses />
+        <FuelingExpenses />
         <Transactionlist />
         <AddTransaction />
       </div>
