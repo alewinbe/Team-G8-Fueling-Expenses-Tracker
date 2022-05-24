@@ -13,9 +13,15 @@ function App() {
       <Header />
       <div className="container">
         <FuelingExpenses />
+      </div>
+      <div className="container2">
         <RefuelingList />
+      </div>
+      <div className="container3">
         <AddRefueling />
       </div>
+        
+      
     </GlobalProvider>
   );
 }
