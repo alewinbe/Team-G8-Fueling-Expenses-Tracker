@@ -20,12 +20,13 @@ body {
 }
 
 .container {
+  display: flex;
+  justify-content: center;
   margin: 100px auto;
   width: 400px;
   margin-right: 100px;
   float: left;
-  
-  
+  padding-top: 5%;
 }
 
 .container2 {
@@ -38,11 +39,14 @@ body {
 .container3 {
   margin: 100px auto;
   width: 400px;
+  padding-left: 4%;
   margin-right: 100px;
   float: left;
 }
 
 h1 {
+  display: flex;
+  justify-content: center;
   letter-spacing: 1px;
   margin: 0;
 }
