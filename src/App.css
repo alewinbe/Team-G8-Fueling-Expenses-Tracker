@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #f7f7f7;
+  background-color: #7d95b1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,8 +20,26 @@ body {
 }
 
 .container {
-  margin: 30px auto;
-  width: 350px;
+  margin: 100px auto;
+  width: 400px;
+  margin-right: 100px;
+  float: left;
+  
+  
+}
+
+.container2 {
+  margin: 100px auto;
+  width: 400px;
+  margin-right: 100px;
+  float: left;
+}
+
+.container3 {
+  margin: 100px auto;
+  width: 400px;
+  margin-right: 100px;
+  float: left;
 }
 
 h1 {
@@ -65,11 +83,11 @@ h4 {
 }
 
 .money.plus {
-  color: #2ecc71;
+  color: #05d35b;
 }
 
 .money.minus {
-  color: #c0392b;
+  color: #7c1307;
 }
 
 label {
@@ -89,7 +107,7 @@ input[type='number'] {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: #8169f8;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
