@@ -19,7 +19,6 @@ export const AddRefueling = () => {
       moneySpent: +moneySpent,
       distanceDriven: +distanceDriven,
     };
-
     addRefueling(newRefueling);
   };
 
